@@ -1,0 +1,11 @@
+extends ../layout/index
+block contenido
+    div.py-10
+        h1.text-4xl.my-10.font-extrabold.text-center Bienes
+            span.font-normal Raices
+        h2.text-center.text-2xl.font-extrabold= pagina
+        div(class='bg-white shadow py-8 mt-10 px-4 rounded-lg max-w-xl mx-auto')
+            p(class=error ? 'bg-red-500' : 'bg-green-500').py-2.px-5.rounded-lg.w-full.font-bold.text-center.text-white.uppercase= mensaje
+        if !error 
+            div.flex.items-center.justify-content.mt-10
+                a(href="/auth/login" class="inline-block w-md px-4 mx-auto rounded-sm bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 cursor-pointer" type="button" ) Iniciar Sesión
