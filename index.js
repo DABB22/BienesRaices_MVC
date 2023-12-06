@@ -52,7 +52,7 @@ app.use(express.static('public')); // con la función de express y el metodo .st
 
 //* Routing
 app.use('/', appRoutes);
-// app.get('/', usuarioRoutes ); // el get se limita a buscar la ruta definida especificamente
+app.get('/', usuarioRoutes ); // el get se limita a buscar la ruta definida especificamente
 app.use('/auth', usuarioRoutes ); // con el use es más dinámico ya que va a buscar todas las rutas que empiecen por el parametro que se indique en el primer
 app.use('/', propiedadesRoutes ); // con el use es más dinámico ya que va a buscar todas las rutas que empiecen por la / 
 app.use('/api', apiRoutes);
