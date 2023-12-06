@@ -60,11 +60,12 @@ app.use('/api', apiRoutes);
 
 //* Mínimos requisitos para definir la aplicación:
 // Crear la aplicación(línea 10), luego definir un puerto y arrancar el proyecto.
+const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+app.listen(port, host, () => {
     console.log('El servidor está funcionando en el puerto', port);
+    console.log('El host es ', host);
 });
-
 
 
 
